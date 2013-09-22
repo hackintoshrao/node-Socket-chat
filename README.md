@@ -13,6 +13,6 @@ Run the following to install the dependencies:
 Run the app's webserver:
     $ node app.js
 
-Observe the port number and use the follwing as your url with the correct port number.
+Observe the port number and use the following as your url with the correct port number.
 
-+ http://localhost:<port number>/
+	http://localhost:<port number>/
