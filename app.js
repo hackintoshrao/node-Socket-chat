@@ -9,7 +9,7 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
-var app = express();
+var app = express.createServer();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -30,6 +30,5 @@ app.configure('development', function(){
 app.get('/', routes.index);
 app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
-});
+app.listen(app.get('port'));
+console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
