@@ -8,9 +8,11 @@ Get a local copy of the current code using git:
     $ cd node-Socket-chat
 
 Run the following to install the dependencies:
+
 	$ npm install
 
 Run the app's webserver:
+
     $ node app.js
 
 Observe the port number and use the following as your url with the correct port number.
