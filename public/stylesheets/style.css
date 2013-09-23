@@ -1,5 +1,5 @@
 html  {
-  height:100px;
+  height:100%;
 }
 
 body { 
@@ -18,9 +18,8 @@ section#chatRoom{
 height: -moz-calc(100% - 80px);
 height: -webkit-calc(100% - 80px);
 height: calc(100% - 80px);
-background-color: #CF0877;
+background-color: #99FFFF;
 }
-
 div#messages {
 height: -moz-calc(100% - 35px);
 height: -webkit-calc(100% - 35px);
@@ -30,6 +29,7 @@ padding: 10px;
 -webkit-box-sizing:border-box;
 box-sizing:border-box;
 }
+
 input#message {
 width: -moz-calc(100% - 80px);
 width: -webkit-calc(100% - 80px);
