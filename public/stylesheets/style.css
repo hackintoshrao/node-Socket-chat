@@ -1,3 +1,4 @@
+
 html  {
   height:100%;
 }
@@ -15,6 +16,7 @@ body {
 }
 
 section#chatRoom{
+
 height: -moz-calc(100% - 80px);
 height: -webkit-calc(100% - 80px);
 height: calc(100% - 80px);
@@ -40,13 +42,16 @@ background-color:#4192C1;
 text-align: right;
 margin-top: 15px;
 }
+ header  h1{
+	padding: 5px;
+	padding-right: 15px;
+	color: #FFFFFF;
+	margin: 0px;
 
-header h1{
-padding: 5px;
-padding-right: 15px;
-color: #FFFFFF;
-margin: 0px;
-}
+  	}
+
+
+
 
 footer{
 padding: 6px;
