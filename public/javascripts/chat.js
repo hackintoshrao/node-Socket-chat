@@ -7,7 +7,7 @@ socket.on("message",function(data){ //associate an event handler for the message
 });
 
 $(function(){
-	$('#send').click(function(data){
+	$('#send').click(function(){
 		var data = {
 			type:'userMessage',
 			message:$('#message').val() 
