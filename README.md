@@ -26,3 +26,4 @@ Observe the port number and use the following as your url with the correct port 
 
 NOTES:
 	*Client/Server should send the messages as strings , so the JSON.stringify() is used on the javascript object to be sent , on the other side the string has to be converted into a javascript object by using JSON.parse() . 
+	*The syntax for sending messages on both client and the server are the same . 
