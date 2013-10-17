@@ -2,8 +2,9 @@ var socket = io.connect('/');//get connected to the server
 
 socket.on("message",function(data){ //associate an event handler for the messages from the server 
 	data=JSON.parse(data);
-	var msg = document.getElementById('messages');
-	msg.innerHTML+=data.message;
+//	var msg = document.getElementById('messages');
+//	msg.innerHTML+=data.message;
+	$('#messages').append(data.message);
 });
 
 $(function(){
