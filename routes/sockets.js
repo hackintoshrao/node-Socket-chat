@@ -7,7 +7,7 @@ exports.initialize = function(server) {
 	socket.on('message',function(message)  {
 		message=JSON.parse(message);
 		if(message.type="userMessage"){
-			socket.broadcast.send(JSON.strigify(message));	
+			socket.broadcast.send(JSON.stringify(message));	
 			message.type="myMessage";
 			socket.send(JSON.stringify(message));
 		}
