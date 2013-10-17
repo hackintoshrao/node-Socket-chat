@@ -4,7 +4,7 @@ socket.on("message",function(data){ //associate an event handler for the message
 	data=JSON.parse(data);
 //	var msg = document.getElementById('messages');
 //	msg.innerHTML+=data.message;
-	$('#messages').append(data.message);
+	$('#messages').append('<div class="mes">'+data.message + '</div>');
 });
 
 $(function(){
