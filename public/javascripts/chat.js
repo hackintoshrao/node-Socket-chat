@@ -8,10 +8,15 @@ socket.on("message",function(data){ //associate an event handler for the message
 });
 
 $(function(){
-	$('.hide').hide();
-	$('#setname')click(function(){
-		$('#chatRoom').toggle();
+	$('.hide').hide();//hiding the main content 
+	$('#nameform').modal("show");//displaying the modal 
+	$('#setname').click(function(){ //handler for the modal setname 
+		
+		$('#chatRoom').toggle(); //displaying the main content 
 		socket.emit("set_name",{name:$('#nickname').val()});
+		$('#nameform').modal("hide"); //hiding the modal 
+		console.log("control reached");
+		
 	});
 	$('#send').click(function(){
 		var data = {
