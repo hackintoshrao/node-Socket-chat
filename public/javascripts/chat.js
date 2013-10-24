@@ -8,6 +8,11 @@ socket.on("message",function(data){ //associate an event handler for the message
 });
 
 $(function(){
+	$('.hide').hide();
+	$('#setname')click(function(){
+		$('#chatRoom').toggle();
+		socket.emit("set_name",{name:$('#nickname').val()});
+	});
 	$('#send').click(function(){
 		var data = {
 			type:'userMessage',

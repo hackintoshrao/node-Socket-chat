@@ -1,11 +1,18 @@
 extends layout
 
 block content
-  section#chatRoom
+  div#nameform.modal.show
+    div.modal-header
+      h3 Please Enter your Nick Name 
+    div.modal-body
+      input#nickname(type='text')
+      br
+      input#setname.btn.btn-primary(type='button',value="Set Name")
+    div.modal-footer
+  div#chatRoom.hide
     div#messages
     input#message(type='text',placeholder='Enter the Message here')
-    input#send(type='button',value='Send')
-block append head 
-  script(type='text/javascript',src='/socket.io/socket.io.js')
-  script(type='text/javascript',src='/javascripts/chat.js') 
+    input#send.btn(type='button',value='Send',style="margin-bottom:7px;")
+ 
+
 
