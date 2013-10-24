@@ -4,10 +4,24 @@ socket.on("message",function(data){ //associate an event handler for the message
 	data=JSON.parse(data);
 //	var msg = document.getElementById('messages');
 //	msg.innerHTML+=data.message;
-	$('#messages').append('<div class="'+data.type+'">'+data.message + '</div>');
+	if(data.username && data.type=="userMessage"){
+		$('#messages').append('<div id="'+data.type+'" class="alert alert-danger"><span style="color:blue;">'+data.username+":</span>"+data.message + '</div>');
+
+	}
+	else if(data.username && data.type=="serverMessage"){
+		$('#messages').append('<div id="'+data.type+'" class="alert alert-success"><span style="color:blue;">'+data.username+":</span>"+data.message + '</div>');
+
+	}
+	else if(data.username && data.type=="myMessage"){
+		$('#messages').append('<div id="'+data.type+'" class="alert alert-info"><span style="color:blue;">'+data.username+":</span>"+data.message + '</div>');
+
+	}
+	else{
+		$('#messages').append('<div id="'+data.type+'" class="alert alert-warning">'+data.message + '</div>');
+	}
 });
 socket.on('name_set',function(data){
-	$('#messages').append('<div class="systemMessage">'+'Hello '+data.name+'</div>');
+	$('#messages').append('<div id="systemMessage" class="alert-danger">'+'Hello '+data.name+'</div>');
 	$('#send').click(function(){
 		var data = {
 			type:'userMessage',
